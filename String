@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <string.h>
+#include <iostream>
+using namespace std;
+
+
+int main(void){
+	char str1[10];
+	char str2[10];
+	int i;
+	int cont;
+	int consoant = 0;
+	
+	cout<< "Digite a primeira palavra: "<<endl;
+	cin>>str1;
+	cout<< "Digite a segunda palavra: "<<endl;
+	cin>>str2;
+	
+	//TAMANHO
+	
+	cout<<"Tamanho da  primeira Palavra: "<<strlen(str1)<<endl<<endl;
+	cout<<"Tamanho da  segunda Palavra: "<<strlen(str2)<<endl<<endl;
+	
+	//MINUSCULA
+	
+	cout<<"Primeira palavra em minusculo: "<<strlwr(str1)<<endl<<endl;
+	cout<<"Segunda palavra em minusculo: "<<strlwr(str2)<<endl<<endl;
+	
+	//COPIAR STRING
+	
+	strcpy(str2,str1);
+	cout<<"Copia: "<<str2 <<endl<<endl;
+	
+	//CONCATENAÇÃO
+	
+	strcat(str1,str2);
+	cout<<"Concatenacao das duas palavras: "<<str1<<endl<<endl;
+	
+	//QTD DE CONSOANTES
+	
+	for(i=0; str1[i] != '\0'; i++){
+		if(str1[i] != 'a' && str1[i] !='e' && str1[i] !='i' && str1[i] !='o' && str1[i] !='u'){
+			consoant ++;
+		}
+	}
+	cout<<"Quantidade de Consoantes: "<<consoant<<endl<<endl;
+}
